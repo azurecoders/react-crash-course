@@ -1,30 +1,31 @@
-import React, { useState } from "react";
-import Navbar from "./Navbar.jsx";
-import Footer from "./Footer.jsx";
-import { cartItems } from "./constants/cart.js";
+import React, { Fragment } from "react";
+import Navbar from "./components/Navbar.jsx";
+import CounterComponent from "./components/CounterComponent.jsx";
+import NamesDisplayComponent from "./components/NamesDisplayComponent.jsx";
+import FormComponent from "./components/FormComponent.jsx";
+import MultipleFieldsForm from "./components/MultipleFieldsForm.jsx";
+import UnderstandingFormSubmit from "./components/UnderstandingFormSubmit.jsx";
+import Home from "./components/Home.jsx";
+import Counter from "./components/Counter.jsx";
 
 const App = () => {
-  let logoName = "Muzammil";
-
-  const [cart, setCart] = useState(cartItems);
-  // ["Shirts", "Pents", "Jeans", "Shoes", "Hats"]
-
-  // Destructuring
-
-  const handleClick = () => {
-    setCart([...cart, "New Item"]);
-    // ["Shirts", "Pents", "Jeans", "Shoes", "Hats", "New Item"]
-  };
-
+  let theme = "light";
   return (
-    <div>
-      {cart.map((item, index) => {
-        return <p key={index}>{item}</p>;
-      })}
-      {/* <Navbar name={count} /> */}
-      {/* <Footer nameForFooter={count} /> */}
-      <button onClick={handleClick}>Click me to add a value in the cart</button>
-    </div>
+    <Fragment>
+      {/* <div>
+        App
+        <Navbar themeToBeUsed={theme} />
+      </div>
+      <div></div> */}
+      {/* <Navbar />
+      <CounterComponent /> */}
+      {/* <NamesDisplayComponent /> */}
+      {/* <FormComponent /> */}
+      {/* <MultipleFieldsForm /> */}
+      {/* <UnderstandingFormSubmit /> */}
+      {/* <Home /> */}
+      <Counter />
+    </Fragment>
   );
 };
 
