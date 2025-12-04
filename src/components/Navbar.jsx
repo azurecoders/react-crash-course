@@ -15,7 +15,15 @@ const Navbar = ({ themeToBeUsed }) => {
     <>
       <h1>Multi Colored Theme Navbar</h1>
       // Ternary Operator // Condition ? If condition's true : If it's false
-      {themeToBeUsed == "dark" ? <h2>Dark Theme</h2> : <h2>Light Theme</h2>}
+      {themeToBeUsed == "dark" ? (
+        <div className="bg-black text-white p-2 rounded-md w-fit">
+          <h2>Dark Theme</h2>
+        </div>
+      ) : (
+        <div className="bg-white border border-black text-black w-fit p-2 rounded-md">
+          <h2>Light Theme</h2>
+        </div>
+      )}
     </>
   );
 };
